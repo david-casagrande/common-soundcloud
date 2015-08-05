@@ -53,6 +53,16 @@ SoundCloud.prototype.pause = function() {
 };
 
 /**
+ * Skip to a track.
+ *
+ * @api public
+ */
+
+SoundCloud.prototype.skip = function(idx) {
+  this.player.skip(idx || 0);
+};
+
+/**
  * Remove all event handlers and free up internal player for
  * garbage collection.
  *

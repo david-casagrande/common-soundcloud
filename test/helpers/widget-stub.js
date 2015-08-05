@@ -21,6 +21,7 @@ widgetStub.bind = widgetStub.addListener; // real
 widgetStub.unbind = sinon.spy();
 widgetStub.play = sinon.spy();
 widgetStub.pause = sinon.spy();
+widgetStub.skip = sinon.spy();
 
 /**
  * Expose `widgetStub`

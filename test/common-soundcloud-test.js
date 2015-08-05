@@ -74,6 +74,16 @@ describe('common-soundcloud', function() {
 
       assert.ok(widgetStub.pause.called);
     });
+
+    it('can skip a track', function() {
+      var player = new SoundCloud('soundcloud-embed');
+
+      player.skip(2);
+      assert.ok(widgetStub.skip.calledWith(2));
+
+      player.skip();
+      assert.ok(widgetStub.skip.calledWith(0));
+    });
   });
 
   describe('events', function() {
